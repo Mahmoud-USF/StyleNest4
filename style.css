@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 'jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.logo img{
+    max-width: 70px;
+    height:auto;
+    border-radius: 50px;
+
+
+}
+.navmenu{
+    display: flex;
+} 
+.navmenu a{
+    color: rgb(124, 124, 124);
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .30s ease;
+    display: block;
+}
+.active{
+
+    border-bottom: 2px solid #ccc;
+    
+}
+.navmenu a:hover{
+    color:blueviolet;
+}
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color:  rgb(124, 124, 124);
+    font-size: 20px;
+    padding: 10px;
+    display: block;/*عشان القايمه تفضل ظاهره لما تأشر عليها*/
+    transition: color 0.3s;
+}
+
+.menu-item a:hover {
+     color: blueviolet; /*لون لما الماوس يجي عليه */
+}
+
+/* القائمة  */
+.dropdown {
+    position: absolute;
+    top: 40px; /* لضبط مكان القائمة تحت ال shop*/
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+ 
+    display: none; /* إخفاء القائمة  */
+    z-index: 10;
+    min-width: 150px;
+}
+
+.dropdown li {
+    padding: 8px 10px;
+}
+
+.dropdown li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown li a:hover {
+    background-color: #f3f3f3;
+}
+
+/* إظهار القائمة*/
+.menu-item:hover .dropdown {
+    display: block;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 15px;
+    color: #7a7a7a;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .30s ease;
+} 
+.nav-icon i:hover{
+    transform: scale(1.5);
+    color: blueviolet;
+}
+#menu-icon{
+    font-size: 35px;
+    color: #7a7a7a;
+    z-index: 10000;
+    cursor: pointer;
+}
+section{
+    padding: 12% 10%;
+}
+.main-home{
+    width: 100%;
+    height: 100vh ;
+    background-image: url(photos/cover3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+.main-text h5{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.main-text h1{
+    color:rgb(255, 119, 0);
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+.main-text p{
+    color:rgb(165, 112, 38);
+    font-size:30px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.main-btn{
+    display: inline-block;
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #ffffff;
+    padding: 12px 25px;
+    transition: all .30 ease;
+}
+.main-btn:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: all .7s;
+
+}
+.product-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+.main-btn i{
+    vertical-align: middle;
+}
+.down-arrow{
+    position: absolute;
+    top: 85%;
+    right: 11%;
+}
+.down i{
+    font-size: 38px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    padding: 12px 12px;
+}
+.down i:hover{
+    background-color: #ffffff;
+    color: #000000;
+    transition: all .7s ease;
+}
+header.sticky{
+    background:#fff;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 50px rgb(0 0 0 / 10%);
+}
+.center-text h2{
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20;
+}
+.center-text span{
+    color: red;
+}
+.product{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .30s;
+}
+.row video {
+
+    margin: 20px auto;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.row video:hover{
+    transform: scale(.95);
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+} 
+.row img:hover{
+    transform: scale(.95);
+    cursor: pointer;
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(18, 160, 13);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.product h4{
+    color: #111;
+    font-size: 16px;
+    text-transform:uppercase;
+    font-weight: 600;
+}
+
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, auto));
+    gap: 3rem;
+}
+.first-info img{
+    width: 130px;
+    height: auto;
+}
+.contact-info h4{
+    color: #2d0404;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .30s;
+}
+.contact-info p:hover{
+    color: red;
+}
+.social-icon i{
+    margin-right: 10px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .30s ease;
+}
+
+.social-icon i:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+@media(max-width:850px){
+    header{
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+@media(max-width:620px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size: 15px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+@media(max-width:750px){
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background:#ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .30s ease;
+    }
+    .navmenu a{
+        display: block;
+        margin: 0;
+    }
+    .navmenu.open{
+        right: 0;
+    }
+}
